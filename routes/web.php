@@ -14,10 +14,14 @@ use App\Http\Controllers\ManualController;
 |
 */
 Route::resource('manual', ManualController::class);
-
+Route::post('manual/check', [ManualController::class,'check'])->name('manual.check');
 
 Route::get('/', function () {
     return redirect('/manual');
+});
+
+Route::post('/manual/test', function () {
+    return view('/manual/test');
 });
 
 Route::group(['middleware' => 'auth'], function () {

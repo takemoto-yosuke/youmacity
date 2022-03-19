@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'group',
+        //'group',
         
     ];
 
@@ -47,5 +47,10 @@ class User extends Authenticatable
   public function mytweets()
   {
     return $this->hasMany(Manual::class)->orderBy('updated_at', 'desc');
-  }    
+  } 
+  
+  public static function getAllOrderByUpdated_at()
+  {
+    return self::orderBy('updated_at', 'desc')->get();
+  }   
 }

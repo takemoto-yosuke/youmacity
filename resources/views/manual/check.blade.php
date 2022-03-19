@@ -12,16 +12,11 @@
           <form class="mb-6" action="{{ route('manual.store') }}" method="POST">
             @csrf
             <div class="flex flex-col mb-4">
-              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="youtube_url">Youtube URL</label>
-              <input class="border py-2 px-3 text-grey-darkest" type="text" name="youtube_url" id="youtube_url">
-              <!-- <input type="hidden" name="user_name_id" id="user_name_id" value={{Auth::user()->id}}> -->
-            </div>
-            <!--
-            <div class="flex flex-col mb-4">
+              非公開動画は任意のタイトルを入力してください
               <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="title">タイトル</label>
               <input class="border py-2 px-3 text-grey-darkest" type="text" name="title" id="title">
-            </div>        
-            -->
+            </div>            
+            <input type="hidden" name="youtube_url" id="youtube_url" value="{{$youtube_url}}">
             <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
               Create
             </button>

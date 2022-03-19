@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('manuals', function (Blueprint $table) {
             $table->id();
-           // $table->integer('user_id')->after('id');
+            $table->string('title')->nullable();
             $table->string('youtube_url');
             $table->timestamps();
         });

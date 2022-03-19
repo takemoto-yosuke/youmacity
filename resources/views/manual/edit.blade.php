@@ -15,10 +15,16 @@
 
             @method('put')  
             @csrf
+<!--            
             <div class="flex flex-col mb-4">
               <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="youtube_url">Youtube URL</label>
               <input class="border py-2 px-3 text-grey-darkest" type="text" name="youtube_url" id="youtube_url" value="{{$manual->youtube_url}}">
             </div>
+-->            
+            <div class="flex flex-col mb-4">
+              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="title">タイトル</label>
+              <input class="border py-2 px-3 text-grey-darkest" type="text" name="title" id="title" value="{{$manual->title}}">
+            </div>            
             <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
               Update
             </button>

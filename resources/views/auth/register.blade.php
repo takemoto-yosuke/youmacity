@@ -51,12 +51,13 @@
             </div>
             
             <!-- Group -->
+            <!--
             <div class="mt-4">
                 <x-label for="group" :value="__('Group')" />
 
                 <x-input id="group" type="text" class="rounded-lg w-full border-gray-300" name="group" :value="old('group')" />
             </div>            
-            
+            -->
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
