@@ -78,7 +78,7 @@
                     $metas["title"] = $manual->title;
                   }
                   ?>
-                  @if (!isset($keyword) || (strpos($metas["title"],$keyword) == true))
+                  @if (!isset($keyword) || (strpos($metas["title"],$keyword) !== false))
                   <div id='contents' style="position: relative; display: flex; align-items: center; padding: 10px; width: 100%; text-align: center;">            
                     <div id='embedded_thumbnail_view' style="width: 40%;">
                     <iframe width='480' height='270' src={{$embedded_url}} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>

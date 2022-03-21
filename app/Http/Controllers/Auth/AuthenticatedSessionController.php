@@ -31,6 +31,10 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        
+        if ($request->email == "admin@admin"){
+            return redirect('/register');
+        }
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }
