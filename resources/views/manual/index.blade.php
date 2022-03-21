@@ -12,6 +12,7 @@
   <!--↓↓ 検索フォーム ↓↓-->
   <div style="padding:20px 0; width: 50%;">
   <form class="form-inline" action="{{url('/manual')}}">
+    @csrf
     <div class="form-group">
     <input type="text" name="keyword" value="{{$keyword}}" class="form-control" placeholder="タイトルキーワードを入力">
     <input type="submit" value="検索" class="btn btn-info">
