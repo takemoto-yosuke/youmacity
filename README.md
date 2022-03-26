@@ -50,3 +50,13 @@ manuals テーブル
 - youtube_url → YouTube動画のURL
 - created_at → timestamps
 - updated_at → timestamps
+
+## Seederによる管理用アカウント登録
+
+MasterSeeder.phpにより以下設定
+
+- name → admin
+- email → admin@admin
+- password → password
+- created_at → now()
+- updated_at → now()
